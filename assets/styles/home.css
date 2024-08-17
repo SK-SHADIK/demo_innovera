@@ -6,6 +6,9 @@
     --gainsboro-color: #ddd;
     --chinese-silver-color: #ccc;
     --cultured-color: #f6f6f6;
+    --alphabet-red-color: #ED1C24;
+    --active-green-color: #6EC531;
+    --yellow-flash-color: #FFE417;
 }
 *{
     margin: 0;
