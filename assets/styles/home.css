@@ -1,0 +1,14 @@
+:root{
+    --black-color: #000;
+    --white-color: #fff;
+    --deep-carrot-orange-color: #DF7527;
+    --cultured-color: #F5F6F7;
+    --gainsboro-color: #ddd;
+    --chinese-silver-color: #ccc;
+    --cultured-color: #f6f6f6;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
