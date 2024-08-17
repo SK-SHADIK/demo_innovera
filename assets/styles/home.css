@@ -1,17 +1,164 @@
-:root{
+:root {
     --black-color: #000;
     --white-color: #fff;
     --deep-carrot-orange-color: #DF7527;
     --cultured-color: #F5F6F7;
     --gainsboro-color: #ddd;
+    --dark-charcoal-color: #333;
     --chinese-silver-color: #ccc;
     --cultured-color: #f6f6f6;
     --alphabet-red-color: #ED1C24;
     --active-green-color: #6EC531;
     --yellow-flash-color: #FFE417;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Navbar styles */
+nav {
+    background-color: var(--cultured-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--dark-charcoal-color);
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--dark-charcoal-color);
+    padding: 10px 15px;
+    display: block;
+    font-weight: 700;
+}
+
+.menu li a:hover {
+    background-color: var(--gainsboro-color);
+    border-radius: 5px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--cultured-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px var(--dark-charcoal-color);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--dark-charcoal-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--gainsboro-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: var(--dark-charcoal-color);
+    height: 2px;
+    width: 25px;
+    margin: 4px;
+}
+
+/* Add these styles for the cross icon */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+}
+
+/* Smooth transition for the bars */
+.menu-toggle span {
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 920px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--cultured-color);
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu li a {
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid var(--gainsboro-color);
+    }
+
+    .menu li:first-child a {
+        border-top: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+    }
 }
