@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovera</title>
-    <link rel="stylesheet" href="assets/styles/home.css">
-</head>
-<body>
-    <nav id="navbar">
-        <div class="logo">
-            <a href="#"><img class="logo-img" src="assets/images/logo.png" alt="Innovera"></a>
-        </div>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Landowners</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Project</a>
-                <div class="dropdown-content">
-                    <a href="#">Ongoing</a>
-                    <a href="#">Upcomming</a>
-                    <a href="#">Completed</a>
-                </div>
-            </li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
 
-    <script src="assets/scripts/home.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Innovera</title>
+        <link rel="stylesheet" href="assets/styles/home.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="header-nav" id="navbar">
+                <div class="header-nav-logo">
+                    <a href="#" class="header-nav-logo-a"><img class="header-nav-logo-img" src="assets/images/logo.png"
+                            alt="Innovera"></a>
+                </div>
+                <ul class="header-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Landowners</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Projects<span class="arrow">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="#">Ongoing</a>
+                            <a href="#">Upcoming</a>
+                            <a href="#">Completed</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <script src="assets/scripts/home.js"></script>
+    </body>
+
 </html>
