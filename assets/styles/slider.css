@@ -1,0 +1,111 @@
+.slider-section {
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-container .slider-inner-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 0 10px;
+}
+
+.slider-container .slide-content {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: var(--semi-transparent-black-color);
+    color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.slider-nav .prev,
+.slider-nav .next {
+    background-color: var(--semi-transparent-black-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.slider-nav .prev {
+    left: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.slider-nav .next {
+    right: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.slider-nav .prev:hover,
+.slider-nav .next:hover {
+    background-color: var(--dark-charcoal-color);
+    border-radius: 8px;
+}
+
+.slider-content-header{
+    color: var(--white-color);
+    font-size: 2rem;
+}
+.slider-content-text {
+    color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+    .slider-container .slide-content {
+        margin-bottom: 30px;
+        padding: 15px;
+    }
+
+    .slider-nav .prev,
+    .slider-nav .next {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container .slide-content {
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 14px;
+        max-width: 80%;
+    }
+
+    .slider-nav .prev,
+    .slider-nav .next {
+        padding: 6px 12px;
+    }
+}
